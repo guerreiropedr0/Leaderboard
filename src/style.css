@@ -1,0 +1,8 @@
+.refresh {
+  display: flex;
+  align-items: center;
+}
+
+.refresh h2 {
+  padding-right: 1rem;
+}
