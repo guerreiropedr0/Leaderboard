@@ -6,6 +6,53 @@
     <title>Template</title>
   </head>
   <body>
-    <h1>Hello!</h1>
+    <header>
+      <h1>Leaderboard</h1>
+    </header>
+    <section class="refresh">
+      <h2>Recent scores</h2>
+      <button type="button">Refresh</button>
+    </section>
+    <table class="leaderboard">
+      <tr>
+        <td>Name: 100</td>
+      </tr>
+      <tr>
+        <td>Name: 20</td>
+      </tr>
+      <tr>
+        <td>Name: 50</td>
+      </tr>
+      <tr>
+        <td>Name: 78</td>
+      </tr>
+      <tr>
+        <td>Name: 125</td>
+      </tr>
+      <tr>
+        <td>Name: 77</td>
+      </tr>
+      <tr>
+        <td>Name: 42</td>
+      </tr>
+    </table>
+    <form>
+      <h2>Add your score</h2>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Your name"
+        required
+      />
+      <input
+        type="number"
+        id="score"
+        name="score"
+        placeholder="Your score"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
