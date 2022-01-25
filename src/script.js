@@ -19,7 +19,7 @@ const SCORE = FORM.querySelector('input[type="number"]');
           user: NAME.value,
           score: SCORE.value,
         }),
-      }
+      },
     );
     FORM.reset();
   });
@@ -27,7 +27,7 @@ const SCORE = FORM.querySelector('input[type="number"]');
 
 const refreshLeaderboard = async () => {
   const response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores'
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores',
   );
   const scoreText = await response.text();
   const score = JSON.parse(scoreText);
