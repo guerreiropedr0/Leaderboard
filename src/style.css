@@ -63,6 +63,10 @@ form {
   justify-self: start;
 }
 
+form h2 {
+  margin-bottom: 2.6rem;
+}
+
 form input {
   border: 2px solid #000;
   padding: 0.7rem;
