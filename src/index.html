@@ -7,34 +7,34 @@
   </head>
   <body>
     <header>
-      <h1>Leaderboard</h1>
+      <h1><span>PAC-MAN</span> Leaderboard</h1>
     </header>
-    <section class="refresh">
-      <h2>Recent scores</h2>
-      <button id="refresh" type="button">Refresh</button>
-    </section>
-    <table class="leaderboard">
-      <tr>
-        <td>No players found</td>
-      </tr>
-    </table>
-    <form>
-      <h2>Add your score</h2>
-      <input
-        type="text"
-        id="fname"
-        name="fname"
-        placeholder="Your name"
-        required
-      />
-      <input
-        type="number"
-        id="score"
-        name="score"
-        placeholder="Your score"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <main>
+      <section>
+        <div class="leaderboard-heading">
+          <h2>Recent scores</h2>
+          <button id="refresh" class="btn" type="button">Refresh</button>
+        </div>
+        <ul class="leaderboard"></ul>
+      </section>
+      <form>
+        <h2>Add your score</h2>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Your name"
+          required
+        />
+        <input
+          type="number"
+          id="score"
+          name="score"
+          placeholder="Your score"
+          required
+        />
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>

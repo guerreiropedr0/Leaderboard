@@ -32,9 +32,8 @@ const refreshLeaderboard = async () => {
   const scoreText = await response.text();
   const score = JSON.parse(scoreText);
   score.result.forEach((player) => {
-    leaderboard.innerHTML += `<tr>
-      <td>${player.user}: ${player.score}</td>
-    </tr>`;
+    leaderboard.innerHTML += `
+      <li>${player.user}:<span> ${player.score}</span></li>`;
   });
 };
 
@@ -42,3 +41,5 @@ document.getElementById('refresh').addEventListener('click', () => {
   leaderboard.innerHTML = '';
   refreshLeaderboard();
 });
+
+window.onload = refreshLeaderboard();
