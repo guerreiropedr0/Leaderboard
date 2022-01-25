@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Template
+# PAC-MAN Leaderboard
 
-> This repository is a template to all my projects.
+> This project has a leaderboard score for PAC-MAN players.
 
-This template includes Webpack, Stylelint, ESlint and Weblint.
+PAC-MAN Leaderboard includes the Leaderboard API. You can add your name and score, and see other player's scores.
 
 ## Built With
 
@@ -37,7 +37,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## Acknowledgments
 
-I took inspiration from a previous coding partner of mine, check his [GitHub profile](https://github.com/ahmedtaa)
+In this project I used the [Leaderboard API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3), please check it out! 😊
 
 ## Show your support
 
