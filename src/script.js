@@ -1,5 +1,6 @@
 import './style.css';
-let leaderboard = document.querySelector('.leaderboard');
+
+const leaderboard = document.querySelector('.leaderboard');
 const FORM = document.querySelector('form');
 const NAME = FORM.querySelector('input');
 const SCORE = FORM.querySelector('input[type="number"]');
@@ -18,17 +19,17 @@ const SCORE = FORM.querySelector('input[type="number"]');
           user: NAME.value,
           score: SCORE.value,
         }),
-      }
+      },
     );
   });
 })();
 
 const refreshLeaderboard = async () => {
-  let response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores'
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores',
   );
-  let scoreText = await response.text();
-  let score = JSON.parse(scoreText);
+  const scoreText = await response.text();
+  const score = JSON.parse(scoreText);
   score.result.forEach((player) => {
     leaderboard.innerHTML += `<tr>
       <td>${player.user}: ${player.score}</td>
