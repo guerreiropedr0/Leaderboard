@@ -1,8 +1,83 @@
-.refresh {
-  display: flex;
-  align-items: center;
+body {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.refresh h2 {
-  padding-right: 1rem;
+main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, auto);
+  width: 50%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.leaderboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#refresh {
+  margin-left: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 0.8rem;
+  background-color: transparent;
+  border: 2px solid black;
+  box-shadow: 4px 4px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #e9e8e8;
+}
+
+.btn:active {
+  background-color: #b9b9b9;
+}
+
+.leaderboard {
+  list-style: none;
+  padding: 0;
+  border: 3px solid black;
+  width: 25vw;
+}
+
+.leaderboard li {
+  padding: 0.7rem;
+}
+
+.leaderboard li:nth-child(even) {
+  background-color: #ddd;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+}
+
+form h2 {
+  margin-bottom: 2.6rem;
+}
+
+form input {
+  border: 2px solid #000;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form input::placeholder {
+  color: #000;
+}
+
+form button {
+  align-self: flex-end;
 }
