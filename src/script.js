@@ -1,45 +1,22 @@
 import './style.css';
+import { postData, getData } from './modules/postAndGet';
 
-const leaderboard = document.querySelector('.leaderboard');
+const UL = document.querySelector('.leaderboard');
 const FORM = document.querySelector('form');
 const NAME = FORM.querySelector('input');
 const SCORE = FORM.querySelector('input[type="number"]');
 
-(() => {
-  FORM.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          user: NAME.value,
-          score: SCORE.value,
-        }),
-      },
-    );
-    FORM.reset();
-  });
-})();
-
-const refreshLeaderboard = async () => {
-  const response = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hu7RDeMDKj2AivBi1yhx/scores',
-  );
-  const scoreText = await response.text();
-  const score = JSON.parse(scoreText);
-  score.result.forEach((player) => {
-    leaderboard.innerHTML += `
-      <li>${player.user}:<span> ${player.score}</span></li>`;
-  });
-};
-
-document.getElementById('refresh').addEventListener('click', () => {
-  leaderboard.innerHTML = '';
-  refreshLeaderboard();
+FORM.addEventListener('submit', (event) => {
+  event.preventDefault();
+  postData('hu7RDeMDKj2AivBi1yhx', NAME.value, SCORE.value);
+  FORM.reset();
+  FORM.focus();
 });
 
-window.onload = refreshLeaderboard();
+document.getElementById('refresh').addEventListener('click', () => {
+  UL.innerHTML = '';
+  getData('hu7RDeMDKj2AivBi1yhx', UL);
+});
+
+window.onload = getData('hu7RDeMDKj2AivBi1yhx', UL);
+
