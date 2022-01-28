@@ -6,6 +6,10 @@
 
 PAC-MAN Leaderboard includes the Leaderboard API. You can add your name and score, and see other player's scores.
 
+## Live Server
+
+In the following link, you can view the [PACMAN's Leaderboard website](https://guerreiropedr0.github.io/Leaderboard/).
+
 ## Built With
 
 - HTML
