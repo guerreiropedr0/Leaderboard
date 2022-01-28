@@ -1,4 +1,4 @@
-import { populate } from "./populate";
+import populate from './populate.js';
 
 export const postData = (id, player, score) => {
   fetch(
@@ -10,11 +10,11 @@ export const postData = (id, player, score) => {
       },
       body: JSON.stringify({
         user: player,
-        score: score,
+        score,
       }),
     },
   );
-}
+};
 
 export const getData = async (id, leaderboard) => {
   const response = await fetch(

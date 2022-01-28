@@ -1,5 +1,5 @@
 import './style.css';
-import { postData, getData } from './modules/postAndGet';
+import { postData, getData } from './modules/postAndGet.js';
 
 const UL = document.querySelector('.leaderboard');
 const FORM = document.querySelector('form');
@@ -19,4 +19,3 @@ document.getElementById('refresh').addEventListener('click', () => {
 });
 
 window.onload = getData('hu7RDeMDKj2AivBi1yhx', UL);
-
