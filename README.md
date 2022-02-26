@@ -8,7 +8,7 @@ PAC-MAN Leaderboard includes the Leaderboard API. You can add your name and scor
 
 ## Live Server
 
-In the following link, you can view the [PACMAN's Leaderboard website](https://guerreiropedr0.github.io/Leaderboard/).
+In the following link, you can view the [PACMAN's Leaderboard website](https://guerreiropedr0-leaderboard.netlify.app/).
 
 ## Built With
 
