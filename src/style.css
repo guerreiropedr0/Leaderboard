@@ -133,6 +133,7 @@ form button {
 
 @media only screen and (max-width: 600px) {
   .container {
+    margin-top: 8rem;
     grid-template-columns: 1fr;
   }
 
